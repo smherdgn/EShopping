@@ -1,0 +1,10 @@
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://10.0.1.39:5432/xankaraaykomedb
+spring.datasource.username=xankaraaykomeuser
+spring.datasource.password=xankaraaykomeuser
+spring.jpa.database=POSTGRESQL
+spring.datasource.platform=postgres
+spring.jpa.generate-ddl=true
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.session.store-type=none
