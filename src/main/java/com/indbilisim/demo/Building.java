@@ -14,8 +14,6 @@ import java.util.Date;
  */
 @Table(name = "X_LOCATION_BUILDING")
 @Entity
-
-@Configurable
 public class Building {
 
     private static final long serialVersionUID = 1L;
