@@ -13,10 +13,7 @@ import javax.validation.constraints.NotNull;
  * <p/>
  * Bu properties tablosu olacak ve her tabloya göre içine kayıt eklenecektir.
  */
-@Table(name = "X_LOCATION_FIELDSDATAPROP", indexes = {
-        @Index(name = "X_Location_FieldsDataProp_" + "tableId" + "_Indx", columnList = "tableId"),
-        @Index(name = "X_Location_FieldsDataProp_" + "fieldValue" + "_Indx", columnList = "fieldValue"),
-        @Index(name = "X_Location_FieldsDataProp_" + "locationfieldspropertiess_id" + "_Indx", columnList = "locationfieldspropertiess_id")})
+@Table(name = "X_LOCATION_FIELDSDATAPROP")
 @Entity
 public class LocationFieldsDataProp extends BaseEntity {
 

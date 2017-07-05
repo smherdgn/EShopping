@@ -12,17 +12,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
-/**
- * @author Alper AKBULAK <alper.akbulak@indbilisim.com.tr>
- * @since 0.0.11
- * 20.10.2016
- * Bu tablo içerisinde oluşturulacak alanın bilgileri tutulacak
- */
-@Table(name = "X_LOCATION_FIELDSPROPERTIES", uniqueConstraints = @UniqueConstraint(columnNames = {"tableName",
-        "fieldName"}), indexes = {
-        @Index(name = "X_Location_FieldsProperties_" + "tableName" + "_Indx", columnList = "tableName"),
-        @Index(name = "X_Location_FieldsProperties_" + "fieldName" + "_Indx", columnList = "fieldName"),
-        @Index(name = "X_Location_FieldsProperties_" + "fieldType" + "_Indx", columnList = "fieldType")})
+
+@Table(name = "X_LOCATION_FIELDSPROPERTIES")
 @Entity
 public class LocationFieldsProperties extends BaseEntity {
 
@@ -76,10 +67,6 @@ public class LocationFieldsProperties extends BaseEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "locationFieldsProperties")
     private List<LocationSelectValues> locationSelectValuesList;
 
-    public static long getSerialVersionUID() {
-
-        return serialVersionUID;
-    }
 
     public String getFieldName() {
 

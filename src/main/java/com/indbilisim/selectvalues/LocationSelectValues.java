@@ -7,15 +7,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-/**
- * @author aakbulak <alper.akbulak@indbilisim.com.tr>
- * @since 0.0.3
- * 20.10.2016
- * LocationSelectValues alanında FieldProperties dataları tutulacak
- */
-@Table(name = "X_LOCATION_SELECTVALUES", indexes = {
-        @Index(name = "X_Location_SelectValues_" + "selectValue" + "_Indx", columnList = "selectValue"),
-        @Index(name = "X_Location_FieldsDataProp_" + "locationfieldsproperties_id" + "_Indx", columnList = "locationfieldsproperties_id")})
+
+@Table(name = "X_LOCATION_SELECTVALUES")
 @Entity
 public class LocationSelectValues extends BaseEntity {
 
