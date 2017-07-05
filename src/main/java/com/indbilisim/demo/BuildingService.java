@@ -31,16 +31,13 @@ public class BuildingService {
     @Autowired
     private BuildingRepository buildingRepository;
 
-    @PersistenceContext
-    private EntityManager entityManager;
-
     @Transactional
     public void delete(Building building) {
 
         buildingRepository.delete(building);
     }
 
- 
+
     public List<Building> findAll() {
 
         return (List<Building>) buildingRepository.findAll();
