@@ -26,8 +26,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -104,15 +104,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <path>/ticaret</path>
+                    <path>/shop</path>
                     <uriEncoding>UTF-8</uriEncoding>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
