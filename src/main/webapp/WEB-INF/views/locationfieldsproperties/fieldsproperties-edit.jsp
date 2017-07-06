@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head><fmt:message key="Locationfieldsproperties.title.edit"/></head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <body>
 <div class="row wrapper border-bottom white-bg page-heading hidden-xs">
     <div class="col-sm-12">
@@ -88,4 +89,6 @@
 
 </body>
 
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.2.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 </html>
