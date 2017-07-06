@@ -36,11 +36,7 @@ public class LocationFieldsDataProp extends BaseEntity {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private LocationFieldsProperties locationFieldsPropertiess;
 
-    public static long getSerialVersionUID() {
 
-        return serialVersionUID;
-
-    }
 
     public String getFieldValue() {
 
