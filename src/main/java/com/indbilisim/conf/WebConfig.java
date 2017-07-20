@@ -23,8 +23,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**")
-                .setCacheControl(CacheControl.maxAge(1, TimeUnit.HOURS).cachePublic());
+        registry.addResourceHandler("/resources/**").setCacheControl(CacheControl.maxAge(1, TimeUnit.HOURS).cachePublic())
+                .addResourceLocations("/resources/");
     }
 
     @Override

@@ -5,17 +5,15 @@
     <classpath>
 
 
-        <dir name="/Users/alikumru/IdeaProjects/EShopping/target/classes">
+        <dir name="/home/semih/IdeaProjects/EShopping/target/classes">
         </dir>
-
-
 
 
     </classpath>
 
     <web>
         <link target="/">
-            <dir name="/User/alikumru/IdeaProject/EShopping/src/main/webapp">
+            <dir name="/home/semih/IdeaProjects/EShopping/src/main/webapp">
             </dir>
 
 
