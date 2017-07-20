@@ -19,4 +19,5 @@
           p:prefix="/WEB-INF/views/"
           p:suffix=".jsp">
     </bean>
+
 </beans>

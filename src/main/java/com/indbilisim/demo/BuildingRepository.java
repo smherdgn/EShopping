@@ -3,6 +3,7 @@ package com.indbilisim.demo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -13,4 +14,6 @@ import java.util.List;
  * @since 0.0.11
  */
 public interface BuildingRepository extends JpaRepository<Building, Long> {
+
+
 }

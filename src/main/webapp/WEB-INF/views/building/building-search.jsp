@@ -10,6 +10,6 @@
 <head>
 </head>
 <body>
-Ekran Açıldı
+Ekran acildi
 </body>
 </html>

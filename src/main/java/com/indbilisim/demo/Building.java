@@ -1,5 +1,6 @@
 package com.indbilisim.demo;
 
+import com.indbilisim.base.BaseEntity;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import javax.persistence.*;
@@ -14,12 +15,8 @@ import java.util.Date;
  */
 @Table(name = "X_LOCATION_BUILDING")
 @Entity
-public class Building {
+public class Building extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
 
     @Column(nullable = true)
     @Size(max = 255)
@@ -32,11 +29,6 @@ public class Building {
     @Size(max = 255)
     private String buildingName;
 
-
-    /**
-     * Kayıt yapan kullanıcı id
-     */
-    private String recordUserId;
 
     /**
      * Kayıt tarihi
@@ -67,16 +59,6 @@ public class Building {
         this.description = description;
     }
 
-
-    public String getRecordUserId() {
-
-        return recordUserId;
-    }
-
-    public void setRecordUserId(String recordUserId) {
-
-        this.recordUserId = recordUserId;
-    }
 
     public Date getRecordDate() {
 

@@ -38,6 +38,8 @@ public class BuildingService {
     }
 
 
+
+
     public List<Building> findAll() {
 
         return (List<Building>) buildingRepository.findAll();
