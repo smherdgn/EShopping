@@ -9,7 +9,7 @@ import javax.persistence.*;
  * Created by ibrahimm on 6.7.2017.
  */
 
-@Table(name = "X_CATEGORY")
+@Table
 @Entity
 public class Category extends BaseEntity {
 

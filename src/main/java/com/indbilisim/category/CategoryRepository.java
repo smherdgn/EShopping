@@ -14,7 +14,5 @@ import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category,Long > {
 
-    @Query(value = "select c from Category as c where c.categoryName=:adi")
-    public List<Category> getCategory(@Param("adi") String adi);
 
 }

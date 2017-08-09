@@ -1,9 +1,12 @@
 package com.indbilisim.category;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * @author ibrahimsengul
@@ -17,22 +20,39 @@ public class CategoryService {
     @Autowired
     CategoryRepository categoryRepository;
 
+    private static final Logger LOGGER = Logger.getLogger( Category.class.getName() );
 
-    public void categorySave(Category category) {
-        categoryRepository.save(category);
+    public boolean categorysave(Category category) {
+
+        boolean result;
+
+            try {
+                categoryRepository.save(category);
+                result = true;
+            } catch (Exception e) {
+                result = false;
+                LOGGER.info("Kayıt Yapılamadı" + e);
+            }
+            return result;
+        }
+
+
+    public void categoryDelete (Category category){
+
+        categoryRepository.delete(category);
+    }
+
+    public void update(Category category){
+
+
     }
 
     public List<Category> findCategoryAll ()
     {
 
        return categoryRepository.findAll();
-
-
     }
 
-    public List<Category> getCategory(String adi)
-    {
-        return categoryRepository.getCategory(adi);
-    }
+
 
 }

@@ -18,17 +18,21 @@ public class Customer extends BaseEntity {
     @Size(max = 30)
     @NotNull
     private String name;
+
     @Size(max = 30)
     @NotNull
     private String surname;
+
     @Size(max = 30)
     @NotNull
     private String mail;
+
     @Size(max = 10)
     private String phone;
 
     @Temporal(TemporalType.DATE)
     private Date birthDate;
+
     @NotNull
     @Size(max = 15)
     private String passwordConfirm;
@@ -102,5 +106,12 @@ public class Customer extends BaseEntity {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Customer [name=" + name + ", surname=" + surname
+                + ", mail="+mail+", ]";
     }
 }

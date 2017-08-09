@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.logging.Logger;
+
 /**
  * Created by alikumru on 12.07.2017.
  */
@@ -18,8 +20,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/customer")
 public class CustomerController {
 
+
     @Autowired
     private CustomerService customerService;
+
 
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
@@ -45,18 +49,21 @@ public class CustomerController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
+
+
         if (error != null)
             model.addAttribute("error", "Your username and password is invalid.");
 
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
 
-        return "login";
+        return "/customer/login";
+
        }
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
-        return "welcome";
+        return "/customer/welcome";
     }
 
 }

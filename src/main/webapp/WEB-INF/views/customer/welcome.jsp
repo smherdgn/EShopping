@@ -33,12 +33,15 @@
 <body>
 <div class="container">
 
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="POST" action="${contextPath}/welcome">
+
+
+<c:if test="${pageContext.request.userPrincipal.name != null}">
+
+        <form id="form" method="POST" action="${contextPath}/welcome">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+        <h2>Welcome >Logout</a></h2>
 
     </c:if>
 

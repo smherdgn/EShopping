@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: alikumru
+  Date: 13.07.2017
+  Time: 09:48
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -36,7 +43,7 @@
         <h2 class="form-signin-heading">Create your account</h2>
         <spring:bind path="name">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="name" class="form-control" placeholder="Username"
+                <form:input type="text" path="name" class="form-control" placeholder="name"
                             autofocus="true"></form:input>
                 <form:errors path="name"></form:errors>
             </div>

@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(readOnly = true)
 public class CustomerService {
 
+
+
     @Autowired
     private CustomerRepository customerRepository;
 
@@ -23,10 +25,12 @@ public class CustomerService {
         BCryptPasswordEncoder bCryptPasswordEncoder =new BCryptPasswordEncoder();
         customer.setPasswordConfirm(bCryptPasswordEncoder.encode(customer.getPasswordConfirm()));
         customer.setRole(Role.USER);
-        customerRepository.save(customer);
-    }
+        customerRepository.save(customer); }
+
+
 
     public Customer findByUsername(String username) {
+
         return null;
     }
 

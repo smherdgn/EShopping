@@ -41,7 +41,6 @@ public class BuildingController {
     @RequestMapping(value = "/demo", method = RequestMethod.GET)
     public String getAdd(Model model) {
 
-
         return PAGE_SEARCH;
     }
 

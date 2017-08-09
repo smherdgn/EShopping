@@ -1,5 +1,6 @@
 package com.indbilisim.demo;
 
+import com.indbilisim.product.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,14 +38,10 @@ public class BuildingService {
         buildingRepository.delete(building);
     }
 
-
-
-
     public List<Building> findAll() {
 
-        return (List<Building>) buildingRepository.findAll();
+        return buildingRepository.findAll();
     }
-
 
     /**
      * Retrieves an entity by its id.
@@ -58,7 +55,9 @@ public class BuildingService {
         Building building = buildingRepository.findOne(id);
 
         return building;
+
     }
+
 
     public Page<Building> findByIdPage(Long id) {
 
@@ -92,15 +91,14 @@ public class BuildingService {
     public boolean save(Building building) {
 
         boolean result;
-        try {
 
-            buildingRepository.save(building);
-            result = true;
-        } catch (Exception e) {
-            result = false;
-            LOGGER.error("Kayıt Yapılamadı" + e);
-        }
-        return result;
-
+            try {
+                buildingRepository.save(building);
+                result = true;
+            } catch (Exception e) {
+                result = false;
+                LOGGER.error("Kayıt Yapılamadı" + e);
+            }
+            return result;
     }
 }
