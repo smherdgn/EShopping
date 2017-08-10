@@ -1,5 +1,6 @@
 package com.indbilisim.category;
 
+import com.indbilisim.common.FormMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,14 +23,20 @@ public class CategoryController {
     @Autowired
     CategoryService categoryService;
 
+
+
+
+
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public String category(Model model) {
         model.addAttribute("categoryForm", new Category());
         model.addAttribute("categoryList",categoryService.findCategoryAll());
+        model.addAttribute("options", FormMode.values());
+
+
 
         return "category/category";
     }
-
 
   /*  @RequestMapping(value = "/category", method = RequestMethod.GET)
     public String getCategory(Model model, @ModelAttribute("form") Category category) {

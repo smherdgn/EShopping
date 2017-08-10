@@ -18,8 +18,15 @@ public class Category extends BaseEntity {
 
     private String categoryName ;
     private String categoryDescription;
+    private String ustCategory;
 
+    public String getUstCategory() {
+        return ustCategory;
+    }
 
+    public void setUstCategory(String ustCategory) {
+        this.ustCategory = ustCategory;
+    }
 
     public String getCategoryName() {
         return categoryName;
