@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.SplittableRandom;
+
 /**
  * @author ibrahimsengul
  * Created by ibrahimm on 6.7.2017.
@@ -32,11 +36,10 @@ public class CategoryController {
         model.addAttribute("categoryForm", new Category());
         model.addAttribute("categoryList",categoryService.findCategoryAll());
         model.addAttribute("options", FormMode.values());
-
-
-
         return "category/category";
     }
+
+
 
   /*  @RequestMapping(value = "/category", method = RequestMethod.GET)
     public String getCategory(Model model, @ModelAttribute("form") Category category) {
@@ -50,12 +53,15 @@ public class CategoryController {
 
 
     @RequestMapping(value = "/category", method = RequestMethod.POST)
-    public String getCategory(@ModelAttribute("categoryForm") Category categoryForm) {
+    public String getCategory(@ModelAttribute("categoryForm") Category categoryForm,FormMode options) {
 
-        categoryService.categorysave(categoryForm);
+            categoryService.categorysave(categoryForm);
+
+
 
         return "redirect:/categoryAdd/category";
     }
+
 
 
 }
